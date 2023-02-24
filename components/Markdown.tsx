@@ -1,6 +1,5 @@
 import React from "react";
-const { marked } = require("marked");
-
+import { marked } from "marked";
 interface MarkdownProps {}
 
 interface MarkdownState {}
@@ -19,7 +18,9 @@ class Markdown extends React.Component<MarkdownProps, MarkdownState> {
   }
 
   createMarkup() {
-    return { __html: marked(this.state.markdown) };
+    return {
+      __html: marked(this.state.markdown),
+    };
   }
 
   render() {
@@ -51,7 +52,7 @@ class Markdown extends React.Component<MarkdownProps, MarkdownState> {
                 Titre
               </h1>
               <div
-                className="h-96"
+                className="h-96 prose lg:prose-xl"
                 dangerouslySetInnerHTML={this.createMarkup()}
               ></div>
             </div>
