@@ -77,7 +77,7 @@ And here. | Okay. | I think we get it.
           <h1 className="bg-slate-800 text-center text-white text-4xl font-bold p-3 rounded-lg mb-5">
             Markdown Previewer
           </h1>
-          <div className="">
+          <div>
             <h1 className="bg-slate-300 text-2xl font-bold p-3 border-2 border-x-black border-t-black">
               Editor
             </h1>
