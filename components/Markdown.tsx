@@ -72,16 +72,18 @@ And here. | Okay. | I think we get it.
 
   render() {
     return (
-      <div className="flex flex-col gap-4 items-center my-5">
-        <div className="w-4/5 ">
-          <h1 className="bg-slate-300 text-3xl font-bold p-3 rounded-lg mb-5">
+      <div className="flex flex-col gap-4 items-center py-5 bg-gradient-to-r from-cyan-600 to-slate-500">
+        <div className="w-4/5 md:w-2/3 xl:w-2/5 2xl:w-2/5 ">
+          <h1 className="bg-slate-800 text-center text-white text-4xl font-bold p-3 rounded-lg mb-5">
             Markdown Previewer
           </h1>
-          <div>
-            <h1 className="bg-slate-300 text-xl font-bold p-3">Editor</h1>
+          <div className="">
+            <h1 className="bg-slate-300 text-2xl font-bold p-3 border-2 border-x-black border-t-black">
+              Editor
+            </h1>
             <div className={incon.className}>
               <textarea
-                className="bg-slate-100 w-full h-64 p-1"
+                className="bg-slate-100 w-full h-64 p-1 border-2 border-black"
                 value={this.state.markdown}
                 onChange={(e) => {
                   this.updateMarkdown(e.target.value);
@@ -90,8 +92,10 @@ And here. | Okay. | I think we get it.
             </div>
           </div>
         </div>
-        <div className="w-11/12">
-          <h1 className="bg-slate-300 text-2xl font-bold p-3 ">Previewer</h1>
+        <div className="w-11/12 md:w-4/5 xl:w-3/5 2xl:w-1/2 border-2 border-black shadow-2xl">
+          <h1 className="bg-slate-300 text-2xl font-bold p-3 border-2 border-b-black">
+            Previewer
+          </h1>
           <div
             className="prose lg:prose-xl bg-slate-100 min-w-full py-4 px-3"
             dangerouslySetInnerHTML={this.createMarkup()}
