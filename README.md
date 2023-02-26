@@ -1,5 +1,3 @@
-
-
 # Markdown Previewer App
 
 This is a simple Markdown Previewer app built with Next.js, TypeScript, and Tailwind CSS. With this app, you can input Markdown syntax and see the rendered HTML output.
